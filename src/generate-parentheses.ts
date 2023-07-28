@@ -18,14 +18,16 @@ const combine = (as: string[], bs: string[]): string[] => {
   return as.flatMap(a => bs.flatMap(b => [a + b, b + a]));
 };
 
-const cache = new Map<number, string[]>();
-const memoize = (f: (x: number) => string[]) => (n: number) => {
-  if (cache.has(n)) {
+const memoize = (f: (x: number) => string[]): (n: number) => string[] => {
+  const cache = new Map<number, string[]>();
+  return (n: number) => {
+    if (cache.has(n)) {
+      return cache.get(n);
+    }
+    cache.set(n, f(n));
     return cache.get(n);
-  }
-  cache.set(n, f(n));
-  return cache.get(n);
-}
+  };
+};
 
 const generateParenthesis = memoize((n: number): string[] => {
   if (n === 0) { return []; }
