@@ -24,10 +24,6 @@ Constraints:
 1 <= s.length <= 500
 s consists of lowercase English letters.
 */
-// 01234567890123456789
-// ababcbacadefegdehijhklij
-// ^       ^
-//         ^
 function partitionLabels(s: string): number[] {
   let partitions: number[] = [];
 
@@ -52,5 +48,3 @@ function partitionLabels(s: string): number[] {
 
   return partitions;
 }
-
-console.log(partitionLabels("ababcbacadefegdehijhklij"));

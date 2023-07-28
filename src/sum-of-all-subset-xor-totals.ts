@@ -42,16 +42,6 @@ Constraints:
 1 <= nums.length <= 12
 1 <= nums[i] <= 20
 */
-
-//  1: 00001 === 1 << 0
-//  2: 00010 === 1 << 1
-//  4: 00100 === 1 << 2
-//  8: 01000 === 1 << 3
-// 16: 10000 === 1 << 4
-//    ..i+1   i i-1...
-//   00000000010000000 = 1 << i
-//   &  10101000101010 = 00000000000000000
-
 function subsetXORSum(nums: number[]): number {
   const numberOfSubsets = 1 << nums.length; // === 2**nums.length
   let sum = 0;

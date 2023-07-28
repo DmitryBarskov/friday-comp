@@ -26,7 +26,6 @@ Constraints:
 -10 <= nums[i] <= 10
 All the integers of nums are unique.
 */
-
 function permute(nums: number[]): number[][] {
   if (nums.length === 1) {
     return [nums];
