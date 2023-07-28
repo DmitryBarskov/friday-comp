@@ -22,7 +22,6 @@ n == matrix[i].length
 1 <= m * n <= 105
 -109 <= matrix[i][j] <= 109
 */
-
 function transpose(matrix: number[][]): number[][] {
   const transposed = new Array<Array<number>>(matrix[0].length);
 
