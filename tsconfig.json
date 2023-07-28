@@ -15,6 +15,7 @@
       "types": [
         "node"
       ],
+      "target": "es2015",
       "esModuleInterop": true,
     },
     "include": [

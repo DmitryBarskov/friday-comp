@@ -1,5 +1,6 @@
 /*
 https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/submissions/988598623/
+1769. Minimum Number of Operations to Move All Balls to Each Box
 
 You have n boxes. You are given a binary string boxes of length n, where boxes[i] is '0' if the ith box is empty, and '1' if it contains one ball.
 
@@ -9,10 +10,7 @@ Return an array answer of size n, where answer[i] is the minimum number of opera
 
 Each answer[i] is calculated considering the initial state of the boxes.
 
-
-
 Example 1:
-
 Input: boxes = "110"
 Output: [1,1,3]
 Explanation: The answer for each box is as follows:
@@ -20,20 +18,15 @@ Explanation: The answer for each box is as follows:
 2) Second box: you will have to move one ball from the first box to the second box in one operation.
 3) Third box: you will have to move one ball from the first box to the third box in two operations, and move one ball from the second box to the third box in one operation.
 
-
 Example 2:
-
 Input: boxes = "001011"
 Output: [11,8,5,4,3,4]
 
-
 Constraints:
-
 n == boxes.length
 1 <= n <= 2000
 boxes[i] is either '0' or '1'.
 */
-
 function minOperations(boxes: string): number[] {
   let normalBoxes = boxes.split("").map(b => parseInt(b)); // [0, 0, 1, 0, 1, 1]
 
@@ -63,6 +56,3 @@ function minOperations(boxes: string): number[] {
 
   return operations; // [11,8,5,4,3,4]
 }
-
-console.log(minOperations("001011"));
-console.log(minOperations("1010"));
